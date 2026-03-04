@@ -1,0 +1,28 @@
+name: gasolineras_burgos
+description: Gas station loyalty & QR-based rewards app for Burgos, Spain.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Date and number formatting
+  intl: ^0.19.0
+
+  # Default icon pack
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

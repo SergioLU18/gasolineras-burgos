@@ -16,6 +16,13 @@ dependencies:
   # Date and number formatting
   intl: ^0.19.0
 
+  # QR code rendering (user loyalty card)
+  qr_flutter: ^4.1.0
+
+  # Interactive map with OpenStreetMap tiles (no API key required)
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+
   # Default icon pack
   cupertino_icons: ^1.0.8
 

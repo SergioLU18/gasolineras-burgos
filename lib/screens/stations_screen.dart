@@ -21,7 +21,6 @@ class StationsScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
         actions: [
-          // Distance info icon
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: Tooltip(
@@ -33,11 +32,11 @@ class StationsScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Subtle summary banner
           Container(
             width: double.infinity,
             color: AppColors.primaryGreen.withValues(alpha: 0.08),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             child: Row(
               children: [
                 const Icon(Icons.location_on,
@@ -54,7 +53,6 @@ class StationsScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Station list
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.only(top: 8, bottom: 16),
@@ -66,7 +64,8 @@ class StationsScreen extends StatelessWidget {
                   onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => StationDetailScreen(station: station),
+                      builder: (_) =>
+                          StationDetailScreen(station: station),
                     ),
                   ),
                 );

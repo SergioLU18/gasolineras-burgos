@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                 _SectionHeader(
                   title: 'Promociones Destacadas',
                   onSeeAll: () =>
-                      context.read<NavigationProvider>().setIndex(2),
+                      context.read<NavigationProvider>().setIndex(3),
                 ),
                 const SizedBox(height: 8),
                 _FeaturedPromotionsCarousel(promotions: promotions),
@@ -115,7 +115,7 @@ class HomeScreen extends StatelessWidget {
           icon: Icons.local_offer,
           label: 'Promociones',
           color: AppColors.accentOrange,
-          onTap: () => context.read<NavigationProvider>().setIndex(2),
+          onTap: () => context.read<NavigationProvider>().setIndex(3),
         ),
       ],
     );

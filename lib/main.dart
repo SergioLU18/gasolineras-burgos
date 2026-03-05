@@ -7,8 +7,9 @@ import 'providers/navigation_provider.dart';
 import 'providers/user_provider.dart';
 import 'providers/stations_provider.dart';
 import 'providers/promotions_provider.dart';
-import 'screens/home_screen.dart';
 import 'screens/stations_screen.dart';
+import 'screens/my_qr_screen.dart';
+import 'screens/map_screen.dart';
 import 'screens/promotions_screen.dart';
 import 'screens/profile_screen.dart';
 import 'theme/app_colors.dart';
@@ -72,7 +73,7 @@ class GasolinerasApp extends StatelessWidget {
       ),
 
       // Cards — rounded with a soft shadow
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 2,
         shadowColor: Colors.black12,
         color: AppColors.cardBg,
@@ -114,22 +115,29 @@ class MainNavigationScreen extends StatelessWidget {
   const MainNavigationScreen({super.key});
 
   static const List<Widget> _screens = [
-    HomeScreen(),
-    StationsScreen(),
-    PromotionsScreen(),
-    ProfileScreen(),
+    StationsScreen(),   // 0
+    MyQrScreen(),       // 1
+    MapScreen(),        // 2 — centre
+    PromotionsScreen(), // 3
+    ProfileScreen(),    // 4
   ];
 
   static const List<NavigationDestination> _destinations = [
     NavigationDestination(
-      icon:         Icon(Icons.home_outlined),
-      selectedIcon: Icon(Icons.home),
-      label:        'Inicio',
-    ),
-    NavigationDestination(
       icon:         Icon(Icons.local_gas_station_outlined),
       selectedIcon: Icon(Icons.local_gas_station),
       label:        'Gasolineras',
+    ),
+    NavigationDestination(
+      icon:         Icon(Icons.qr_code_outlined),
+      selectedIcon: Icon(Icons.qr_code),
+      label:        'Mi QR',
+    ),
+    // Centre tab
+    NavigationDestination(
+      icon:         Icon(Icons.map_outlined),
+      selectedIcon: Icon(Icons.map),
+      label:        'Mapa',
     ),
     NavigationDestination(
       icon:         Icon(Icons.local_offer_outlined),
